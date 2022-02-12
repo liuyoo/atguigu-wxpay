@@ -1,0 +1,21 @@
+server:
+  port: 8090
+
+spring:
+  application:
+    name: atguigu-wxpay #应用的名字
+
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver #mysql5要去掉cj
+    url: jdbc:mysql://localhost:3306/payment?serverTimezone=GMT%2B8&characterEncoding=utf-8
+    username: root
+    password: root
+
+
+mybatis-plus:
+  configuration: #sql日志
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:com/example/demo/mapper/xml/*.xml
